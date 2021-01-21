@@ -10,7 +10,7 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_USER: root
       MYSQL_PASSWORD: password
-      MYSQL_DATABASE: db_thaisminas
+      MYSQL_DATABASE: db_danielgmateus
     ports:
       - 3306:3306
 

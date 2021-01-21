@@ -1,4 +1,4 @@
-# api-thaisminas
+# api-danielgmateus
 
 1) Requisitos para o projeto:
 
@@ -69,7 +69,7 @@ AWS_QUERYSTRING_AUTH = ''
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
-DEFAULT_FILE_STORAGE = 'apithaisminas.storage_backends.MediaStorage'
+DEFAULT_FILE_STORAGE = 'apidanielgmateus.storage_backends.MediaStorage'
 ```
 
 Complete com as informações relativas ao seu ambiente.
@@ -77,19 +77,19 @@ Complete com as informações relativas ao seu ambiente.
 4) Com a conexão ao banco realizada, execute o comando abaixo:
 
 ```
-python3 manage.py migrate --settings=apithaisminas.local_settings
+python3 manage.py migrate --settings=apidanielgmateus.local_settings
 ```
 
 5) Execute o comando abaixo para definir o seu usuário administrador:
 
 ```
-python3 manage.py createsuperuser --settings=apithaisminas.local_settings
+python3 manage.py createsuperuser --settings=apidanielgmateus.local_settings
 ```
 
 6) Para iniciar o projeto, utilize o comando abaixo:
 
 ```
-python3 manage.py runserver --settings=apithaisminas.local_settings
+python3 manage.py runserver --settings=apidanielgmateus.local_settings
 ```
 
 7) Para visualizar a documentação da API, acesse o endereço abaixo:
