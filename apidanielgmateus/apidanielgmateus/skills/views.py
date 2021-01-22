@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from .models import Skill
+from .serializers import SkillSerializer
 
-# Create your views here.
+from rest_framework.viewsets import ModelViewSet
+
+
+class SkillView(ModelViewSet):
+    queryset = Skill.objects.filter(status=True)
+    serializer_class = SkillSerializer
+    http_method_names = ['get']
