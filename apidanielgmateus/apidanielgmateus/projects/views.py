@@ -1,8 +1,8 @@
 from django.http import HttpResponseRedirect
 
-from .models import Project, Categorie, File
+from .models import Project, Category, File
 
-from .serializers import CategorieSerializer, CategorieProjectsSerializer, ProjectSerializer, FileSerializer
+from .serializers import CategorySerializer, ProjectsCategorySerializer, ProjectSerializer, FileSerializer
 
 from rest_framework.viewsets import ModelViewSet
 from rest_framework import mixins
@@ -18,12 +18,12 @@ class ProjectView(ModelViewSet):
     lookup_field = 'slug'
 
 
-class CategorieView(ModelViewSet):
-    queryset = Categorie.objects.filter(status=True, projects__status=True)
-    default_serializer_class = CategorieSerializer
+class CategoryView(ModelViewSet):
+    queryset = Category.objects.filter(status=True, projects__status=True)
+    default_serializer_class = CategorySerializer
     serializer_classes = {
-        'list': CategorieSerializer,
-        'retrieve': CategorieProjectsSerializer
+        'list': CategorySerializer,
+        'retrieve': ProjectsCategorySerializer
     }
     http_method_names = ['get']
     lookup_field = 'slug'

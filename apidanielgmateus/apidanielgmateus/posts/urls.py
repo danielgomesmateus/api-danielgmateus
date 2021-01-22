@@ -1,9 +1,9 @@
 from rest_framework.routers import SimpleRouter
 
-from .views import PostView, CategorieView
+from .views import PostView, CategoryView
 
 app_name = 'posts'
 
 router = SimpleRouter()
 router.register('posts', PostView)
-router.register('posts-categories', CategorieView)
+router.register('posts-category', CategoryView)

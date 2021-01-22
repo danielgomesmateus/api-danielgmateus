@@ -3,7 +3,7 @@ from django.db import models
 from froala_editor.fields import FroalaField
 
 
-class Categorie(models.Model):
+class Category(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField('Nome:', max_length=35)
     slug = models.SlugField('Identificador:', max_length=50)
@@ -22,7 +22,7 @@ class Categorie(models.Model):
 
 class Project(models.Model):
     id = models.AutoField(primary_key=True)
-    categorie = models.ForeignKey(Categorie, null=True, related_name='projects', on_delete=models.CASCADE)
+    categorie = models.ForeignKey(Category, null=True, related_name='projects', on_delete=models.CASCADE)
     name = models.CharField('Nome:', max_length=50)
     description_short = models.CharField('Descrição curta:', max_length=50)
     content = FroalaField('Conteúdo:')

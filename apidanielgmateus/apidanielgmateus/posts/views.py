@@ -1,14 +1,8 @@
-from django.http import HttpResponseRedirect
+from .models import Post, Category
 
-from .models import Post, Categorie
-
-from .serializers import CategorieSerializer, CategoriePostsSerializer, PostSerializer
+from .serializers import CategorySerializer, PostsCategorySerializer, PostSerializer
 
 from rest_framework.viewsets import ModelViewSet
-from rest_framework import mixins
-from rest_framework import viewsets
-from rest_framework import status
-from rest_framework.response import Response
 
 
 class PostView(ModelViewSet):
@@ -18,12 +12,12 @@ class PostView(ModelViewSet):
     lookup_field = 'slug'
 
 
-class CategorieView(ModelViewSet):
-    queryset = Categorie.objects.filter(status=True, posts__status=True)
-    default_serializer_class = CategorieSerializer
+class CategoryView(ModelViewSet):
+    queryset = Category.objects.filter(status=True, posts__status=True)
+    default_serializer_class = CategorySerializer
     serializer_classes = {
-        'list': CategorieSerializer,
-        'retrieve': CategoriePostsSerializer
+        'list': CategorySerializer,
+        'retrieve': PostsCategorySerializer
     }
     http_method_names = ['get']
     lookup_field = 'slug'
