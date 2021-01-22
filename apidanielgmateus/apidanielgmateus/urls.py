@@ -16,20 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from django.conf.urls.static import static
-from . import settings
-
 from rest_framework.routers import DefaultRouter
 from rest_framework import permissions
 
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
-from apidanielgmateus.contacts.urls import router as contacts_router
-from apidanielgmateus.pages.urls import router as pages_router
-from apidanielgmateus.projects.urls import router as projects_router
-from apidanielgmateus.slides.urls import router as slides_router
-from apidanielgmateus.posts.urls import router as posts_router
+from .contacts.urls import router as contacts_router
+from .pages.urls import router as pages_router
+from .projects.urls import router as projects_router
+from .slides.urls import router as slides_router
+from .posts.urls import router as posts_router
 
 router = DefaultRouter()
 
