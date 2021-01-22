@@ -16,7 +16,7 @@ class PostSerializer(ModelSerializer):
         )
 
 
-class PostCategorySerializer(ModelSerializer):
+class PostCategoryListSerializer(ModelSerializer):
 
     class Meta:
         model = Category

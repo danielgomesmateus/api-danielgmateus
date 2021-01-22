@@ -151,7 +151,7 @@ REST_FRAMEWORK = {
     }
 }
 
-REDOC_SETTINGS = {
+SWAGGER_SETTINGS = {
    'LAZY_RENDERING': False,
    'PATH_IN_MIDDLE': True
 }
