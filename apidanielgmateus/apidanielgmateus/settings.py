@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'apidanielgmateus.contacts',
     'apidanielgmateus.pages',
     'apidanielgmateus.projects',
-    'apidanielgmateus.posts'
+    'apidanielgmateus.posts',
+    'apidanielgmateus.experiences'
 ]
 
 X_FRAME_OPTIONS='SAMEORIGIN'
