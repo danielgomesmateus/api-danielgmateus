@@ -25,7 +25,6 @@ from drf_yasg import openapi
 from .contacts.urls import router as contacts_router
 from .pages.urls import router as pages_router
 from .projects.urls import router as projects_router
-from .slides.urls import router as slides_router
 from .posts.urls import router as posts_router
 
 router = DefaultRouter()
@@ -33,7 +32,6 @@ router = DefaultRouter()
 router.registry.extend(contacts_router.registry)
 router.registry.extend(pages_router.registry)
 router.registry.extend(projects_router.registry)
-router.registry.extend(slides_router.registry)
 router.registry.extend(posts_router.registry)
 
 schema_view = get_schema_view(

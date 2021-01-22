@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'apidanielgmateus.contacts',
     'apidanielgmateus.pages',
     'apidanielgmateus.projects',
-    'apidanielgmateus.slides',
     'apidanielgmateus.posts'
 ]
 
@@ -137,6 +136,8 @@ USE_TZ = True
 
 STATIC_URL = os.path.join(BASE_DIR, 'static/')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
