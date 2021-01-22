@@ -22,7 +22,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     id = models.AutoField(primary_key=True)
-    categorie = models.ForeignKey(Category, null=True, related_name='posts', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, null=True, related_name='posts', on_delete=models.CASCADE)
     name = models.CharField('Nome:', max_length=50)
     description_short = models.CharField('Descrição curta:', max_length=50)
     content = FroalaField('Conteúdo:')

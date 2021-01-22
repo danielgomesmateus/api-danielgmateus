@@ -1,6 +1,6 @@
 from .models import Post, Category
 
-from .serializers import CategorySerializer, PostsCategorySerializer, PostSerializer
+from .serializers import PostCategorySerializer, PostsCategorySerializer, PostSerializer
 
 from rest_framework.viewsets import ModelViewSet
 
@@ -14,9 +14,9 @@ class PostView(ModelViewSet):
 
 class CategoryView(ModelViewSet):
     queryset = Category.objects.filter(status=True, posts__status=True)
-    default_serializer_class = CategorySerializer
+    default_serializer_class = PostCategorySerializer
     serializer_classes = {
-        'list': CategorySerializer,
+        'list': PostCategorySerializer,
         'retrieve': PostsCategorySerializer
     }
     http_method_names = ['get']

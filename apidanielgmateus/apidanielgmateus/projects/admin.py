@@ -5,13 +5,13 @@ from .models import Project, Category, File
 class ProjectAdmin(admin.ModelAdmin):
     list_display = [
         'name', 
-        'categorie', 
+        'category',
         'slug',
         'status'
     ]
 
 
-class CategorieAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     list_display = [
         'name',
         'slug',
@@ -28,5 +28,5 @@ class FileAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Project, ProjectAdmin)
-admin.site.register(Category, CategorieAdmin)
+admin.site.register(Category, CategoryAdmin)
 admin.site.register(File, FileAdmin)

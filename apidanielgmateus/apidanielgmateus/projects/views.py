@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect
 
 from .models import Project, Category, File
 
-from .serializers import CategorySerializer, ProjectsCategorySerializer, ProjectSerializer, FileSerializer
+from .serializers import ProjectCategoryListSerializer, ProjectsCategorySerializer, ProjectSerializer, FileSerializer
 
 from rest_framework.viewsets import ModelViewSet
 from rest_framework import mixins
@@ -20,9 +20,9 @@ class ProjectView(ModelViewSet):
 
 class CategoryView(ModelViewSet):
     queryset = Category.objects.filter(status=True, projects__status=True)
-    default_serializer_class = CategorySerializer
+    default_serializer_class = ProjectCategoryListSerializer
     serializer_classes = {
-        'list': CategorySerializer,
+        'list': ProjectCategoryListSerializer,
         'retrieve': ProjectsCategorySerializer
     }
     http_method_names = ['get']

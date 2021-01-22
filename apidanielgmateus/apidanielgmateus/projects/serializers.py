@@ -16,7 +16,7 @@ class ProjectSerializer(ModelSerializer):
         )
 
 
-class CategorySerializer(ModelSerializer):
+class ProjectCategoryListSerializer(ModelSerializer):
 
     class Meta:
         model = Category
