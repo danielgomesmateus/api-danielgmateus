@@ -5,7 +5,7 @@ class Experience(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField('Título:', max_length=100)
     company = models.CharField('Empresa:', max_length=100)
-    description = models.TextField('Descricao:')
+    description = models.TextField('Descrição:')
     image = models.ImageField('Imagem da empresa:', max_length=255, upload_to='experiences/images')
     started_at = models.DateField('Entrada em:')
     ended_at = models.DateField('Saída em:')
