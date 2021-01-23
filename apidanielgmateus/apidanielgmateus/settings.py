@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'froala_editor',
     'corsheaders',
     'apidanielgmateus.contacts',
-    'apidanielgmateus.pages',
     'apidanielgmateus.projects',
     'apidanielgmateus.posts',
     'apidanielgmateus.experiences',

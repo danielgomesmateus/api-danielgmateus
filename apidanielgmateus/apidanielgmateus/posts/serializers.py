@@ -12,7 +12,9 @@ class PostSerializer(ModelSerializer):
             'description_short', 
             'content', 
             'cover_image',
-            'slug'
+            'slug',
+            'created_at',
+            'updated_at'
         )
 
 

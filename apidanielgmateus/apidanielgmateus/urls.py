@@ -23,7 +23,6 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
 from .contacts.urls import router as contacts_router
-from .pages.urls import router as pages_router
 from .projects.urls import router as projects_router
 from .posts.urls import router as posts_router
 from .skills.urls import router as skills_router
@@ -32,7 +31,6 @@ from .experiences.urls import router as experiences_router
 router = DefaultRouter()
 
 router.registry.extend(contacts_router.registry)
-router.registry.extend(pages_router.registry)
 router.registry.extend(projects_router.registry)
 router.registry.extend(posts_router.registry)
 router.registry.extend(skills_router.registry)
