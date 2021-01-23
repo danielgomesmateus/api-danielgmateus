@@ -11,10 +11,10 @@ class Skill(models.Model):
     )
 
     id = models.AutoField(primary_key=True)
-    name = models.CharField('Título:', max_length=100)
-    rating = models.CharField(max_length=200, choices=RATING_CHOICES)
+    name = models.CharField('Nome:', max_length=100)
+    rating = models.CharField('Nível:', max_length=200, choices=RATING_CHOICES)
     image = models.ImageField('Imagem da habilidade:', max_length=255, upload_to='skills/images')
-    status = models.BooleanField(default=True)
+    status = models.BooleanField('Status:', default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -24,4 +24,4 @@ class Skill(models.Model):
         ordering = ['-id']
 
     def __str__(self):
-        return self.title
+        return self.name
