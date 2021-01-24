@@ -8,5 +8,7 @@ class AcademicFormationSerializer(serializers.ModelSerializer):
         fields = (
             'name',
             'institution',
-            'status'
+            'started_at',
+            'ended_at',
+            'image'
         )
