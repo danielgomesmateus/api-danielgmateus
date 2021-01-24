@@ -41,13 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'drf_yasg',
-    'froala_editor',
     'corsheaders',
     'apidanielgmateus.contacts',
     'apidanielgmateus.projects',
     'apidanielgmateus.posts',
     'apidanielgmateus.experiences',
-    'apidanielgmateus.skills'
+    'apidanielgmateus.skills',
+    'apidanielgmateus.academic_formations'
 ]
 
 X_FRAME_OPTIONS='SAMEORIGIN'
