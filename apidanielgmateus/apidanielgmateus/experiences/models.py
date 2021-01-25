@@ -8,7 +8,7 @@ class Experience(models.Model):
     description = models.TextField('Descrição:')
     image = models.ImageField('Imagem da empresa:', max_length=255, upload_to='experiences/images')
     started_at = models.DateField('Entrada em:')
-    ended_at = models.DateField('Saída em:')
+    ended_at = models.DateField('Saída em:', blank=True, null=True)
     status = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
